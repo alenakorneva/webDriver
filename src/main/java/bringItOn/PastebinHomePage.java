@@ -13,10 +13,16 @@ public class PastebinHomePage extends AbstractPage{
     @FindBy(xpath = "//textarea[@id='postform-text']")
     private WebElement textArea;
 
+    @FindBy(xpath = "//span[text()='Syntax Highlighting']/following-sibling::div/label[@for='paste-raw-on']")
+    private WebElement syntaxHighlightingToggleSwitch;
+
+    @FindBy(xpath = "")
+    private WebElement syntaxHighlightingDropDownList;
+
+
+
     @FindBy(xpath = "//input[@id='postform-name']")
     private WebElement pasteTitle;
-
-
 
     @FindBy(xpath = "//button[@type='submit'][contains(text(), 'Create New Paste')]")
     private WebElement createNewPasteButton;
